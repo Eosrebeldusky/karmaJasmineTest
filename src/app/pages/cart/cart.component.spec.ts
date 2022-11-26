@@ -28,8 +28,10 @@ describe('Cart component', ()=>{
         fixture = TestBed.createComponent(CartComponent);
         component = fixture.componentInstance; 
         fixture.detectChanges();
-
     });
 
+    it('should create', ()=>{
+            expect(component).toBeTruthy();
+    })
 
 });
