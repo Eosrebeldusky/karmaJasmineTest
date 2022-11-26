@@ -22,11 +22,14 @@ describe('Cart component', ()=>{
             ],
             schemas:[CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA]
         });
-
-
     });
 
+    beforeEach(()=>{
+        fixture = TestBed.createComponent(CartComponent);
+        component = fixture.componentInstance; 
+        fixture.detectChanges();
 
+    });
 
 
 });
