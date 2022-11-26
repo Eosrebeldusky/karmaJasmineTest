@@ -32,6 +32,7 @@ describe('Cart component', ()=>{
 
     it('should create', ()=>{
             expect(component).toBeTruthy();
+            expect(component).toBeFalse();
     })
 
 });
