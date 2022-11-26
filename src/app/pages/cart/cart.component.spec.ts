@@ -41,21 +41,10 @@ describe('Cart component', ()=>{
             expect(component).toBeTruthy(); //El expect es el test. que espero que haga 
     })
 
-
-
-    // public getTotalPrice(listCartBook: Book[]): number {
-    //     let totalPrice = 0;
-    //     listCartBook.forEach((book: Book) => {
-    //       totalPrice += book.amount * book.price;
-    //     });
-    //     return totalPrice;
-    //   }
-
-
     it('getTotalPrice returns amount',()=>{
         const totalprice = component.getTotalPrice(listBook); //Aca guardamos el valor.
         expect(totalprice).toBeGreaterThan(0)
+        expect(totalprice).not.toBeNull()
     })
-
 
 });
