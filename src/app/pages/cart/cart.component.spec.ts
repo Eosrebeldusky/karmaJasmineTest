@@ -34,4 +34,22 @@ describe('Cart component', ()=>{
             expect(component).toBeTruthy();            
     })
 
+
+
+    // public getTotalPrice(listCartBook: Book[]): number {
+    //     let totalPrice = 0;
+    //     listCartBook.forEach((book: Book) => {
+    //       totalPrice += book.amount * book.price;
+    //     });
+    //     return totalPrice;
+    //   }
+
+
+    it('getTotalPrice returns amount',()=>{
+        
+
+
+    })
+
+
 });
