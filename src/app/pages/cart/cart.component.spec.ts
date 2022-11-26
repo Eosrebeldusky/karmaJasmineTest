@@ -38,7 +38,7 @@ describe('Cart component', ()=>{
     });
 
     it('should create', ()=>{
-            expect(component).toBeTruthy();            
+            expect(component).toBeTruthy(); //El expect es el test. que espero que haga 
     })
 
 
@@ -53,9 +53,8 @@ describe('Cart component', ()=>{
 
 
     it('getTotalPrice returns amount',()=>{
-
-
-
+        const totalprice = component.getTotalPrice(listBook); //Aca guardamos el valor.
+        expect(totalprice).toBeGreaterThan(0)
     })
 
 
