@@ -3,6 +3,13 @@ import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from "@angular/core";
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { BookService } from "src/app/services/book.service";
 import { CartComponent } from "./cart.component";
+import { Book } from "src/app/models/book.model";
+
+const listBook: Book[] = [
+    {name:'',author:'',isbn:'',price:15,amount:2},
+    {name:'',author:'',isbn:'',price:20,amount:1},
+    {name:'',author:'',isbn:'',price:30,amount:100}
+]
 
 
 describe('Cart component', ()=>{
@@ -46,7 +53,7 @@ describe('Cart component', ()=>{
 
 
     it('getTotalPrice returns amount',()=>{
-        
+
 
 
     })
