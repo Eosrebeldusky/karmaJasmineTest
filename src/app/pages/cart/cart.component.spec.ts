@@ -59,7 +59,8 @@ describe('Cart component', ()=>{
     it('onInputNumberChange', ()=>{
         const action = 'plus'
         const book = listBook[0];
-        
+
+        const spy1 = spyOn(service,'updateAmountBook')
 
         
     })
