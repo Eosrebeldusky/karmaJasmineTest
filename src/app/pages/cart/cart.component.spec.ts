@@ -16,7 +16,7 @@ describe('Cart component', ()=>{
 
     let component : CartComponent;
     let fixture : ComponentFixture<CartComponent>;
-
+    let service : BookService
 
     beforeEach(()=>{
         TestBed.configureTestingModule({
@@ -32,6 +32,7 @@ describe('Cart component', ()=>{
     });
 
     beforeEach(()=>{
+        service = fixture.debugElement.injector.get(BookService)
         fixture = TestBed.createComponent(CartComponent);
         component = fixture.componentInstance; 
         fixture.detectChanges();
@@ -47,4 +48,19 @@ describe('Cart component', ()=>{
         expect(totalprice).not.toBeNull()
     })
 
+
+    // public onInputNumberChange(action: string, book: Book): void {
+    //     const amount = action === 'plus' ? book.amount + 1 : book.amount - 1;
+    //     book.amount = Number(amount);
+    //     this.listCartBook = this._bookService.updateAmountBook(book);
+    //     this.totalPrice = this.getTotalPrice(this.listCartBook);
+    //   }
+
+    it('onInputNumberChange', ()=>{
+        const action = 'plus'
+        const book = listBook[0];
+        
+
+        
+    })
 });
