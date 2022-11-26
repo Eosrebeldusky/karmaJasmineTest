@@ -32,8 +32,8 @@ describe('Cart component', ()=>{
     });
 
     beforeEach(()=>{
-        service = fixture.debugElement.injector.get(BookService)
         fixture = TestBed.createComponent(CartComponent);
+        service = fixture.debugElement.injector.get(BookService)
         component = fixture.componentInstance; 
         fixture.detectChanges();
     });
@@ -60,8 +60,13 @@ describe('Cart component', ()=>{
         const action = 'plus'
         const book = listBook[0];
 
-        const spy1 = spyOn(service,'updateAmountBook')
+        const spy1 = spyOn(service,'updateAmountBook').and.callFake( ()=> null );
+        const spy2 = spyOn(component,'getTotalPrice').and.callFake( ()=> null );
 
+        component.onInputNumberChange(action,book)
+        expect(spy1).toHaveBeenCalled();
+
+       
         
     })
 });
