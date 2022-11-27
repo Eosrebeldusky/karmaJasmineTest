@@ -65,8 +65,5 @@ describe('Cart component', ()=>{
 
         component.onInputNumberChange(action,book)
         expect(spy1).toHaveBeenCalled();
-
-       
-        
     })
 });

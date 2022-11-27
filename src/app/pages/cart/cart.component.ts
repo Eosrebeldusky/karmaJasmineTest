@@ -35,7 +35,7 @@ export class CartComponent implements OnInit {
     book.amount = Number(amount);
     this.listCartBook = this._bookService.updateAmountBook(book);
     this.totalPrice = this.getTotalPrice(this.listCartBook);
-  }
+  } 
 
   public onClearBooks(): void {
     if (this.listCartBook && this.listCartBook.length > 0) {
@@ -50,5 +50,5 @@ export class CartComponent implements OnInit {
     this._bookService.removeBooksFromCart();
   }
 
-  //vid 23
+ 
 }
