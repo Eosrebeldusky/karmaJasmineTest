@@ -56,14 +56,40 @@ describe('Cart component', ()=>{
     //     this.totalPrice = this.getTotalPrice(this.listCartBook);
     //   }
 
-    it('onInputNumberChange', ()=>{
+    it('onInputNumberChange increments', ()=>{
         const action = 'plus'
         const book = listBook[0];
+        
+
+        const spy1 = spyOn(service,'updateAmountBook').and.callFake( ()=> null );
+        const spy2 = spyOn(component,'getTotalPrice').and.callFake( ()=> null );
+
+        expect(book.amount).toBe(2)
+
+        component.onInputNumberChange(action,book)
+
+        expect(book.amount).toBe(3)
+         
+        expect(spy1).toHaveBeenCalled();
+        expect(spy2).toHaveBeenCalled();        
+               
+    })
+
+
+    it('onInputNumber Decrement', ()=>{
+        const action = 'minus'
+        const book = listBook[0];
+       
 
         const spy1 = spyOn(service,'updateAmountBook').and.callFake( ()=> null );
         const spy2 = spyOn(component,'getTotalPrice').and.callFake( ()=> null );
 
         component.onInputNumberChange(action,book)
         expect(spy1).toHaveBeenCalled();
+        expect(spy2).toHaveBeenCalled();        
+       
     })
+
+
+    
 });
