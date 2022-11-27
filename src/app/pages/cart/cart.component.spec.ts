@@ -96,5 +96,18 @@ describe('Cart component', ()=>{
     })
 
 
+
+    // public onClearBooks(): void {
+    //     if (this.listCartBook && this.listCartBook.length > 0) {
+    //       this._clearListCartBook();
+    //     } else {
+    //        console.log("No books available");
+    //     }
+    //   }
+    
+    //   private _clearListCartBook() {
+    //     this.listCartBook = [];
+    //     this._bookService.removeBooksFromCart();
+    //   }
     
 });
