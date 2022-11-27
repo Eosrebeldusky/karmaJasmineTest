@@ -84,9 +84,14 @@ describe('Cart component', ()=>{
         const spy1 = spyOn(service,'updateAmountBook').and.callFake( ()=> null );
         const spy2 = spyOn(component,'getTotalPrice').and.callFake( ()=> null );
 
-        component.onInputNumberChange(action,book)
-        expect(spy1).toHaveBeenCalled();
-        expect(spy2).toHaveBeenCalled();        
+        expect(book.amount === 2).toBeTrue(); // confirmo valor de amount
+
+        component.onInputNumberChange(action,book) //llamo a la resta
+
+        expect(book.amount === 1).toBeTrue(); //reviso si restó
+
+        expect(spy1).toHaveBeenCalled(); //llamamos al servicio que hay en spy01?
+        expect(spy2).toHaveBeenCalled(); //llamamos al servicio que hay en spy02?
        
     })
 
