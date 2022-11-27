@@ -109,5 +109,7 @@ describe('Cart component', ()=>{
     //     this.listCartBook = [];
     //     this._bookService.removeBooksFromCart();
     //   }
+
+    //vid 25
     
 });
