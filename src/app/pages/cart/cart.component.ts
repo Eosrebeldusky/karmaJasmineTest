@@ -50,5 +50,4 @@ export class CartComponent implements OnInit {
     this._bookService.removeBooksFromCart();
   }
 
- 
-}
+ }
