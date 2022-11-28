@@ -111,5 +111,13 @@ describe('Cart component', ()=>{
     //   }
 
     //vid 25
+
+
+    it('_clearListCartBook works correctly', ()=>{
+        component.listCartBook = listBook
+        component.onClearBooks;
+        expect(component.listCartBook.length).toBe(0)
+
+    });
     
 });
